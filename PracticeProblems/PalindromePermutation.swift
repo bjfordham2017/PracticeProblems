@@ -14,7 +14,6 @@ import Foundation
 func palindromeOne(_ input: String) -> Bool {
     var charCount = [Character:Int]()
     var oddCount = 0
-    var evenCount = 0
     
     for char in input.characters {
     
@@ -28,9 +27,7 @@ func palindromeOne(_ input: String) -> Bool {
     
     for (_, value) in charCount {
     
-        if value % 2 == 0 {
-            evenCount += 1
-        } else {
+        if value % 2 != 0 {
             oddCount += 1
         }
     
